@@ -1,0 +1,5 @@
+logs
+*.log
+node_modules/
+udagram-api-feed/set_env.sh
+udagram-api-user/set_env.sh
