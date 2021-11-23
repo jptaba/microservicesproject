@@ -15,7 +15,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: jptaba/udagram-frontend:v1
+      - image: jptaba/udagram-frontend:v2
         name: frontend
         imagePullPolicy: Always          
         resources:
