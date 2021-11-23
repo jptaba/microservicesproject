@@ -4,6 +4,6 @@ node_modules/
 udagram-api-feed/set_env.sh
 udagram-api-user/set_env.sh
 set_env.sh
+env-configmap*
 aws-secret*
 env-secret*
-env-configmap*
