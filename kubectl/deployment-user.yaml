@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: backend-user
-  name: backend-user
+    service: udagram-api-user
+  name: udagram-api-user
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      service: backend-user
+      service: udagram-api-user
   template:
     metadata:
       labels:
-        service: backend-user
+        service: udagram-api-user
     spec:
       containers:
-      - image: jptaba/udagram-api-user:v1
-        name: backend-user
+      - image: jptaba/udagram-api-user:latest
+        name: udagram-api-user
         imagePullPolicy: Always  
         resources:
           requests:
@@ -31,21 +31,6 @@ spec:
             configMapKeyRef:
               name: env-config
               key: URL
-        - name: AWS_BUCKET
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_BUCKET
-        - name: AWS_PROFILE
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_PROFILE
-        - name: AWS_REGION
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_REGION
         - name: JWT_SECRET
           valueFrom:
             configMapKeyRef:
@@ -71,12 +56,4 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_USERNAME      
-        volumeMounts:
-        - name: aws-secret
-          mountPath: "/root/.aws/"
-          readOnly: true        
       restartPolicy: Always
-      volumes:
-      - name: aws-secret
-        secret:
-          secretName: aws-secret 
