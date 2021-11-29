@@ -1,6 +1,8 @@
 logs
 *.log
-node_modules/
-udagram-api-feed/set_env.sh
-udagram-api-user/set_env.sh
+node_modules
+set_env.sh
+env-configmap.yaml
+aws-secret.yaml
+env-secret.yaml
 set_env.sh
