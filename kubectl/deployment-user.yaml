@@ -15,7 +15,7 @@ spec:
         service: udagram-api-user
     spec:
       containers:
-      - image: jptaba/udagram-api-user:latest
+      - image: jptaba/udagram-api-user:v1
         name: udagram-api-user
         imagePullPolicy: Always  
         resources:
