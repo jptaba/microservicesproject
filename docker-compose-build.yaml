@@ -1,18 +1,18 @@
 version: "3"
 services:
+  backend_user:
+    build:
+      context: ./udagram-api-user
+    image: jptaba/udagram-api-user
+  backend_feed:
+    build:
+      context: ./udagram-api-feed
+    image: jptaba/udagram-api-feed
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
     image: jptaba/reverseproxy
-  udagram-api-user:
-    build:
-      context: ./udagram-api-user
-    image: jptaba/udagram-api-user
-  udagram-api-feed:
-    build:
-      context: ./udagram-api-feed
-    image: jptaba/udagram-api-feed
-  udagram-frontend:
+  frontend:
     build:
       context: ./udagram-frontend
     image: jptaba/udagram-frontend

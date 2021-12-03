@@ -5,7 +5,7 @@ metadata:
     service: udagram-frontend
   name: udagram-frontend
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       service: udagram-frontend
@@ -16,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: jptaba/udagram-frontend:v1
+      - image: jptaba/udagram-frontend:latest
         name: udagram-frontend
         imagePullPolicy: Always          
         resources:
