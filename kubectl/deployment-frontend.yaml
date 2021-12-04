@@ -16,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: jptaba/udagram-frontend:latest
+      - image: jptaba/udagram-frontend:v1
         name: udagram-frontend
         imagePullPolicy: Always          
         resources:

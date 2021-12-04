@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: jptaba/reverseproxy:latest
+      - image: jptaba/reverseproxy:v1
         name: reverseproxy
         imagePullPolicy: Always          
         resources:

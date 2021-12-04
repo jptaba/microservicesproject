@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: jptaba/udagram-api-feed:latest
+        image: jptaba/udagram-api-feed:v1
         resources:
           requests:
             memory: "64Mi"
